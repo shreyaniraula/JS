@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>Validating Email</title>
+    </head>
+    <body>
+        <form name="form1">
+            Enter your email: <input type="text" id="email"><br>
+            <input type="submit" name="Submit" onclick="validateEmail()">
+        </form>
+    </body>
+
+    <script>
+        function validateEmail(){
+            var email = document.getElementById("email").value
+            atpos=email.indexOf("@")
+            dotpos=email.lastIndexOf(".")
+            if(atpos<1 || (dotpos-atpos<2)){
+                alert('Enter correct email')
+                document.form1.email.focus();
+                return false;
+            }
+            return true;
+        }
+    </script>
+</html>

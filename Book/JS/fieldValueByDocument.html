@@ -1,0 +1,22 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessing field value by document</title>
+</head>
+
+<body>
+    <form name="form1">
+        Enter name: <input type="text" name="name"><br>
+        <input type="button" onclick="printValue()" value="Print Name">
+    </form>
+</body>
+<script>
+    function printValue() {
+        let name = document.form1.name.value;
+        alert('Welcome ' + name)
+    }
+</script>
+
+</html>

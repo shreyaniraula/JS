@@ -1,0 +1,43 @@
+<html>
+
+<head>
+    <title>Displaying PHP Table Values</title>
+    <style>
+        table {
+            border: 2px solid;
+        }
+
+        th,
+        td {
+            border: 1px solid;
+            padding: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <th>Product Code</th>
+            <th>Product Name</th>
+            <th>Product Price</th>
+        </tr>
+
+        <?php
+            $Products = array(
+                array('pcode', 'pname', 'price'),
+                array(127, 'Web Technology', 2500),
+                array(190, 'System Design', 1975),
+                array(634, 'Software Design', 9800),
+            );
+            for($i=1; $i < count($Products); $i++){
+                for($j=0; $j < count($Products[$i]); $j++){
+                    echo $Products[$i][$j] . "\t";
+                }
+                echo "<br>";
+            }
+        ?>
+    </table>
+</body>
+
+</html>

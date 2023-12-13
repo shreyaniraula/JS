@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>Deleting Cookies</title>
+        <style>
+            #button{
+                padding: 8px;
+                margin-top: 8px;
+                border-radius: 8px;
+                background-color: gray;
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <form name="form1">
+            <input type="text" name="cookie">
+            <input type="button" id="button" value="Delete Cookie" onclick="deleteCookie()">
+        </form>
+    </body>
+
+    <script>
+        function deleteCookie(){
+            let currentTime = new Date()
+            let cookieValue = encodeURIComponent(document.form1.cookie.value)
+
+            currentTime.setMonth(currentTime.getMonth()-1)
+            document.cookie = 'name = ' + cookieValue
+            document.cookie = 'expires = ' + currentTime
+
+            document.write('Deleted cookie: ' + currentTime)
+        }
+    </script>
+</html>

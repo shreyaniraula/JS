@@ -1,0 +1,23 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walking the DOM</title>
+</head>
+
+<body>
+    <form>
+        First Name: <input type="text" id="name" name="name"><br>
+        <input type="button" value="Submit" onclick="getName()"><br>
+    </form>
+</body>
+
+<script>
+    function getName() {
+        var name = document.getElementById("name").value;
+        alert("Your name is " + name)
+    }
+</script>
+
+</html>

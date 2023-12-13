@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+    line-height: 25px;
+}
+
+div{
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 10%;
+    padding: 10px;
+    background-color: lightgray;
+}
+
+#submit{
+    padding: 10px;
+}

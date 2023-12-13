@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Form Validation</title>
+    </head>
+    <body>
+        <form name="form1">
+            Name: <input type="text" id="name"><br><br>
+            Number: <input type="text" id="number"><br><br>
+            Email: <input type="text" id="email"><br><br>
+            Select your gender<br>
+            Male<input type="radio" name="gender" id="male">&nbsp;&nbsp;
+            Female<input type="radio" name="gender" id="female"><br><br>
+            <input type="button" value="Submit" onclick="validate()"><br><br>
+        </form>
+    </body>
+
+    <script>
+        function validate(){
+            let namePattern = /^[a-zA-Z\s]+$/
+            let numberPattern=/^[0-9]{10}/
+
+            let userName = document.getElementById("name").value
+            let userNumber = document.getElementById("number").value
+            let userEmail = document.getElementById("email").value
+            let emailAtPos = userEmail.indexOf('@')
+            let emailDotPos = userEmail.lastIndexOf('.')
+            let male = document.getElementById('male').checked
+            let female = document.getElementById('female').checked            
+            
+            if(userName == ''){
+                alert("Enter name")
+                document.form1.name.focus()
+                return false
+            }
+            else if(!userName.match(namePattern)){
+                alert('Name not Valid!')
+                document.form1.name.focus()
+                return false
+            }
+
+            
+            if(userNumber == ''){
+                alert("Enter number")
+                document.form1.number.focus()
+                return false
+            }
+            else if(!userNumber.match(numberPattern)){
+                alert("Invalid Number")
+                document.form1.number.focus()
+                return false
+            }
+
+            if(emailAtPos<1 || (emailDotPos - emailAtPos < 2)){
+                alert("Invalid Email")
+                document.form1.email.focus()
+                return false
+            }
+
+            if(!(male||female)){
+                alert("Select your gender")
+                return false
+            }
+
+            document.form1.reset()
+            return true
+        }
+    </script>
+
+</html>

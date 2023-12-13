@@ -1,0 +1,33 @@
+<html>
+
+<head>
+    <title>Alpha-Numeric Validation</title>
+</head>
+
+<body>
+    <form name="form1">
+        Enter password: <input type="text" id="password"><br>
+        <input type="button" value="Submit" onclick="validate()">
+    </form>
+</body>
+
+<script>
+    function validate() {
+        let pattern = /^[0-9 a-z A-Z]+$/
+        let password = document.getElementById("password").value
+        // console.log(password)
+
+        if (password.match(pattern)) {
+            alert("Your password is valid.")
+            document.form1.password.focus()
+            return true
+        }
+        else {
+            alert("Enter alphanumeric character.")
+            document.form1.password.focus()
+            return false
+        }
+    }
+</script>
+
+</html>

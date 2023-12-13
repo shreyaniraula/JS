@@ -1,0 +1,90 @@
+<html>
+
+<head>
+    <title>jQuery</title>
+    <style>
+        p {
+            width: 50%;
+            background-color: rgb(203, 196, 196);
+        }
+
+        /* #hide,
+        #show {
+            padding: 5px;
+            margin: 2px 3px;
+            background-color: rgb(203, 196, 196);
+            border-radius: 8px;
+        } */
+
+        #animate {
+            padding: 5px;
+            margin: 2px 3px;
+            background-color: rgb(203, 196, 196);
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <!--
+        <p id="para1">
+        I am para 1.
+        </p>
+        <p id="para2">
+            I am para 2.
+        </p>
+
+        <input type="button" value="Hide" id="hide" class="button">
+        <input type="button" value="Show" id="show" class="button">
+    -->
+
+    <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum quae, est, porro dicta cumque quasi quibusdam
+        consequuntur totam tenetur voluptate distinctio natus nisi vel quidem excepturi in aliquid? Culpa, hic. Odio
+        placeat at quia molestiae quaerat eum, natus saepe qui consequatur illo. Quae soluta suscipit quidem aut earum,
+        quo quas!
+    </p>
+    <input type="button" value="Animate" id="animate">
+</body>
+
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
+<script>
+    // $('#hide').click(function () {
+    //     $('p').hide();
+    // });
+    // $('#show').click(function(){
+    //     $('p').show();
+    // });
+    // $('input').click(function(){
+    //     $('p').toggle(1000);
+    // });
+
+    // $('.button').click(function(){
+    //     $('p').fadeOut(1000, function(){
+    //         console.log('Jadoooooooooooo!')
+    //     })
+    // })
+    // $('.button').click(function(){
+    //     $('p').fadeTo(1000, function(){
+    //         console.log('Jadoooooooooooo!')
+    //     })
+    // })
+
+    // $('.button').click(function () {
+    //     $('p').fadeOut(1000, function () {
+    //         console.log('Jadoooooooooooo!')
+    //     }),
+
+    //         $('#para1').fadeTo("fast", 0.3),
+
+    //         $('#para2').fadeTo("slow", 0.15)
+    // })
+
+    $('#animate').click(function () {
+        $('p').animate({ fontSize: "20px", opacity: 0.4, letterSpacing: "3px" }, 'slow')
+    })
+</script>
+
+
+</html>

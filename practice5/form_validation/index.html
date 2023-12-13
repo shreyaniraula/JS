@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>HTML FORMS</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div>
+        <form name="RegForm" id="RegForm" method="post">
+            <label for="name">Name</label><br>
+            <input type="text" id="name" name="name"><br><br>
+
+            <label for="password">Password</label><br>
+            <input type="password" id="password" name="password"><br><br>
+
+            <label for="email">Email</label><br>
+            <input type="text" id="email" name="email"><br><br>
+
+            <label for="age">Age</label><br>
+            <input type="text" id="age" name="age"><br><br>
+
+            <label for="gender">Gender</label><br>
+            <input type="radio" id="male" name="gender" value="Male">
+            <label for="male">Male</label>
+
+            <input type="radio" id="female" name="gender" value="Female">
+            <label for="female">Female</label><br><br>
+
+            <label for="subjects">Select your favourite subject.</label><br>
+            <select name="subjects" id="subjects">
+                <option value="html">HTML</option>
+                <option value="css">CSS</option>
+                <option value="js">JS</option>
+            </select><br><br>
+
+            <button type="submit" id="submit">Submit</button><br><br>
+        </form>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>

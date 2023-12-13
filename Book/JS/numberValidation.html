@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Validating Numbers in Form</title>
+    </head>
+    <body>
+        <form name="form1">
+            Enter your number: <input type="text" id="number"><br>
+            <input type="button" value="Submit" onclick="validateNumber()"><br>
+        </form>
+    </body>
+    
+    <script>
+        function validateNumber(){
+            let pattern = /^[0-9]+$/
+            let number = document.getElementById("number").value
+            if(number.match(pattern)){
+                alert('Your number is accepted!');
+                document.form1.number.focus();
+                return true;
+            }
+        }
+    </script>
+</html>

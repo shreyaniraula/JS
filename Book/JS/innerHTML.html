@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>InnerHTML</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <form>
+            <input type="button" value="Show Magic" onclick="showCommentForm()">
+            <div id="myLocation"></div>
+        </form>
+    </body>
+    <script>
+        function showCommentForm(){
+            var data = "JavaScript is Fun";
+            document.getElementById('myLocation').innerHTML = data;
+        }
+    </script>
+</html>

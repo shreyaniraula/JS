@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Adding Cookies</title>
+    </head>
+
+    <body>
+        <form name="form1">
+            Enter a key: <input type="text" id="key">
+            Enter a value: <input type="text" id="value">
+            <input type="button" value="Add Cookie" onclick="addCookie()">
+        </form>
+    </body>
+
+    <script>
+        function addCookie(){
+            let cookieKey = encodeURIComponent(document.getElementById("key").value)
+            let cookieValue = encodeURIComponent(document.getElementById("value").value)
+
+            document.cookie = `${cookieKey} = ${cookieValue}`
+
+            console.log(document.cookie)
+        }
+    </script>
+</html>

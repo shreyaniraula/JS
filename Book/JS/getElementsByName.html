@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Get Elements By Name</title>
+    </head>
+    <form>
+        Select Your Gender<br>
+        Male<input type="radio" name="gender" value="male">
+        Female<input type="radio" name="gender" value="female">
+        Other<input type="radio" name="gender" value="other"><br>
+        <input type="submit" name="Submit" onclick="countGender()">
+    </form>
+
+    <script>
+        function countGender(){
+            var totalGenders = document.getElementsByName("gender");
+            alert("Total Genders: " + totalGenders.length)
+        }
+    </script>
+</html>

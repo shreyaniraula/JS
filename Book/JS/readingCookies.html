@@ -1,0 +1,12 @@
+<html>
+    <script>
+        let allCookies = document.cookie
+        let cookieArray = allCookies.split(';')
+
+        for(let i=0; i<cookieArray.length; i++){
+            let key=cookieArray[i].split('=')[0]
+            let value = cookieArray[i].split('=')[1]
+            document.write(key + " = " + value + '<br>')
+        }
+    </script>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Website</title>
+</head>
+<body>
+    <!-- Heading and paragraph -->
+    <hr>
+    <h1>Movies to watch</h1>
+    <p>There are a lot of movies to watch.</p>
+
+    <!-- Links -->
+    <!-- Example of absolute link -->
+    <hr>
+    <a href="https://letterboxd.com">Click here to check out some movie reviews.</a>
+    <br>
+
+    <!-- Example of relative link -->
+    <a href="movies.html">Click here to watch movies recommended by me.</a>
+
+    <!-- Images -->
+    <hr>
+    <!-- Relative image -->
+    <img src="image.jpeg" alt="hyashreyaa">
+
+    <!-- Absolute image -->
+    <img src="https://plus.unsplash.com/premium_photo-1677637523057-a06a10d689fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80" alt="It's fooooooood" width="121px">
+
+
+    <hr>
+    <!-- Bold, italic and underline -->
+    <br>
+    <b>This is bold</b>
+    <br>
+    <i>This is italic</i>
+    <br>
+    <u>This is underlined</u>
+    <br>
+
+    <!-- big and small -->
+    <big>This is big</big>
+    <br>
+    <small>This is small</small>
+    <br>
+
+
+    <hr>
+
+    <!-- Superscript and subscript -->
+    <p>The molecular formula of water is H<sub>2</sub>O</p>
+    <p>The formula of circle is x<sup>2</sup>+y<sup>2</sup>=r<sup>2</sup></p>
+
+    <hr>
+
+    <pre>
+    import 'package:flutter/services.dart' show rootBundle;
+
+    Future<String> loadAsset() async {
+        return await rootBundle.loadString('assets/config.json');
+    }
+    </pre>
+</body>
+</html>
